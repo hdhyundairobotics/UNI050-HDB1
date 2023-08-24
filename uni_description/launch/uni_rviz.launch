@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="method" default="navigation"/>
+
+  <group if="$(eval method=='mapping')">     
+     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find uni_description)/rviz/myrobot_mapping.rviz"/>
+  </group>
+
+  <group if="$(eval method=='navigation')">     
+     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find uni_description)/rviz/myrobot_navigation.rviz"/>
+  </group>
+
+</launch>
