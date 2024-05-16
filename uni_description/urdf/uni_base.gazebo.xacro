@@ -29,7 +29,7 @@
       <update_rate>100</update_rate>
       <left_joint>wheel_left_joint</left_joint>
       <right_joint>wheel_right_joint</right_joint>
-      <wheel_separation>0.694</wheel_separation>
+      <wheel_separation>0.347</wheel_separation>
       <wheel_diameter>0.13</wheel_diameter>
       <odometry_frame>odom</odometry_frame>
 
