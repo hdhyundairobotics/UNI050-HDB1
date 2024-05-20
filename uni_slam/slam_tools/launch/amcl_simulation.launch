@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch>
+    <arg name="map_file"       default=" $(find navigation_tools)/maps/map.yaml"/>
+        <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+            <arg name="use_map_topic" default="true"/>
+            <arg name="scan_topic" default="/scan" />
+        <node pkg="amcl" type="amcl" name="amcl">
+<!--    <rosparam command="load" file="$(find slam_tools)/config/initial_pose.yaml" />-->
+<!--    <rosparam command="load" file="$(find slam_tools)/config/amcl_param.yaml" />-->
+    <remap from="scan" to="$(arg scan_topic)"/>
+  </node>
+
+</launch>

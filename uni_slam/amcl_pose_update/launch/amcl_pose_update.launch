@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="amcl_pose_update" type="amcl_pose_update_node" name="amcl_pose_update_node" output="screen">
+    <rosparam command="load" file="$(find amcl_pose_update)/config/amcl_pose_update_param.yaml"/>
+    <rosparam command="load" file="$(find amcl_pose_update)/config/package_run_flag.yaml"/>
+  </node>
+</launch>
