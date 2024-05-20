@@ -1,0 +1,12 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find tag_recognition)/config/custom_rosconsole.conf"/>
+
+  <node pkg="tag_recognition" type="tag_recognition" name="tag_recognition" output="screen">
+    <rosparam command="load" file="$(find tag_recognition)/config/tag_recognition_param.yaml"/>
+    <!--rosparam command="load" file="$(find tag_recognition)/config/package_run_flag.yaml"/-->
+  </node>  
+
+  <!--<node pkg="tf" type="static_transform_publisher" name="broadcasterTFmini" args="0 0 0 0 0 0 base_link TFmini 100" /> -->
+  <!-- <node pkg="sci_lid_tfmini" type="sci_lid_tfmini" name="sci_lid_tfmini_left" output="screen"> -->
+  <!-- <node pkg="sci_lid_tfmini" type="sci_lid_tfmini" name="sci_lid_tfmini_right" output="screen"> -->
+</launch>
