@@ -1,4 +1,0 @@
-# AMCL Pose Update for Tag Recognition Param
-total_tag_num : 2
-
-tag_center_margin : 200   # mm
